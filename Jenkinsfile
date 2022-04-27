@@ -25,7 +25,7 @@ def slackChannel = "k8s-jenkins"
 // Args for pipeline
 def initiateData = [project: "ML"]
 def compileData = [run: true, artifactType: ["DockerHub"]]
-def testData = [run: false]
+def testData = [run: true]
 def artifactData = [run: true, artifactType: ["DockerHub"]]
 def intTestData = [run: false]
 def deploymentData = [run: false, environments: ["staging"]]
