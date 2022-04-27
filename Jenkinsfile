@@ -1,16 +1,16 @@
-@Library('ni-utils') _
+@Library('ni-utils-private') _
 
 //service name is extrapolated from repository name check
 def svcName = currentBuild.rawBuild.project.parent.displayName
 
 // Define pod
 def pod = libraryResource 'org/foo/infraTemplate.yaml'
-def amazon = libraryResource 'org/foo/dependencies/amazon.yaml'
+def docker = libraryResource 'org/foo/dependencies/docker.yaml'
 def template_vars = [
     'nodeSelectorName': 'buildnodes',
     'build_label': svcName,
     'python_version' : '3.7.13-slim',
-    'image_dependencies' : [amazon]
+    'image_dependencies' : [docker]
 ]
 pod = renderTemplate(pod, template_vars)
 print pod
