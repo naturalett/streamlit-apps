@@ -13,7 +13,7 @@ If you are interested in the web app backed by a Postgres database, checkout out
 ### Getting up and running locally
 
 ```shell
-$ git clone git@github.com:Natural-Intelligence/analysts-streamlit-apps.git
+$ git clone git@github.com:naturalett/streamlit-apps.git
 $ cd analysts-streamlit-apps/
 $ docker image build -t streamlit:app .
 $ docker container run -p 8501:8501 -d streamlit:app
