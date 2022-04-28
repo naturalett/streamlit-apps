@@ -2,7 +2,7 @@
 
 
 //service name is extrapolated from repository name check
-def svcName = currentBuild.rawBuild.project.parent.displayName
+def svcName = (scm.getUserRemoteConfigs()[0].getUrl().tokenize('/')[3].split("\\.")[0]).toLowerCase()
 
 // Define pod
 def pod = libraryResource 'org/foo/infraTemplate.yaml'
