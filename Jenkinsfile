@@ -1,4 +1,4 @@
-@Library('ni-utils-private@fix-main') _
+@Library('ni-utils') _
 
 
 //service name is extrapolated from repository name check

@@ -38,4 +38,4 @@ $
 
 ### Deploying to the cloud
 
-Refer to my [blog post](https://collinprather.github.io/blog/docker/aws/2020/03/11/streamlit-docker-pt2.html)!
+Refer to the [blog post](https://collinprather.github.io/blog/docker/aws/2020/03/11/streamlit-docker-pt2.html)!
