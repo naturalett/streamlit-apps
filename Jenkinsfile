@@ -1,7 +1,8 @@
-@Library('ni-utils-private@fix-main') _
+@Library('ni-utils') _
+
 
 //service name is extrapolated from repository name check
-def svcName = currentBuild.rawBuild.project.parent.displayName
+def svcName = (scm.getUserRemoteConfigs()[0].getUrl().tokenize('/')[3].split("\\.")[0]).toLowerCase()
 
 // Define pod
 def pod = libraryResource 'org/foo/infraTemplate.yaml'
@@ -24,7 +25,7 @@ def slackChannel = "k8s-jenkins"
 // Args for pipeline
 def initiateData = [project: "ML"]
 def compileData = [run: true, artifactType: ["DockerHub"]]
-def testData = [run: false]
+def testData = [run: true]
 def artifactData = [run: true, artifactType: ["DockerHub"]]
 def intTestData = [run: false]
 def deploymentData = [run: false, environments: ["staging"]]
