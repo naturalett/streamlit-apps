@@ -24,8 +24,8 @@ COPY requirements.txt ./requirements.txt
 RUN pip3 install -r requirements.txt
 
 # copying all files over
-RUN rm ./pip.conf
 COPY . .
+RUN rm -rf pip.conf
 
 # cmd to launch app when container is run
 CMD streamlit run app.py
