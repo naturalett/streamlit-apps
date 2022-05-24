@@ -17,6 +17,7 @@ WORKDIR /streamlit-docker
 
 # copy over requirements
 RUN python3 -m pip install --upgrade pip
+RUN ln -s /usr/bin/python3 /usr/local/bin/python
 COPY requirements.txt ./requirements.txt
 
 # install pip then packages
