@@ -7,11 +7,12 @@ def svcName = (scm.getUserRemoteConfigs()[0].getUrl().tokenize('/')[3].split("\\
 // Define pod
 def pod = libraryResource 'org/foo/infraTemplate.yaml'
 def docker = libraryResource 'org/foo/dependencies/docker.yaml'
+def jq = libraryResource 'org/foo/dependencies/jq.yaml'
 def template_vars = [
     'nodeSelectorName': 'buildnodes',
     'build_label': svcName,
     'python_version' : '3.7.13-slim',
-    'image_dependencies' : [docker]
+    'image_dependencies' : [docker, jq]
 ]
 pod = renderTemplate(pod, template_vars)
 print pod
