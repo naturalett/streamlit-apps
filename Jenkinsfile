@@ -24,7 +24,7 @@ def sharedLibrary = new org.foo.pipelines.machineLearning()
 def slackChannel = "k8s-jenkins"
 
 // Args for pipeline
-def initiateData = [project: "ML"]
+def initiateData = [project: "ML", namespace: "machine-learning"]
 def compileData = [run: true, artifactType: ["DockerHub"]]
 def testData = [run: true]
 def artifactData = [run: true, artifactType: ["DockerHub"]]
