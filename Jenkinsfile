@@ -1,4 +1,4 @@
-@Library('ni-utils') _
+@Library('ni-utils-test') _
 
 
 //service name is extrapolated from repository name check
