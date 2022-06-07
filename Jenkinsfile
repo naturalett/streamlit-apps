@@ -10,7 +10,7 @@ def docker = libraryResource 'org/foo/dependencies/docker.yaml'
 def alpine_curl_jq = libraryResource 'org/foo/dependencies/alpine-curl-jq.yaml'
 def git = libraryResource 'org/foo/dependencies/git.yaml'
 def template_vars = [
-    'nodeSelectorName': 'buildnodes',
+    'nodeSelectorName': '',
     'build_label': svcName,
     'python_version' : '3.7.13-slim',
     'image_dependencies' : [docker, alpine_curl_jq, git]
